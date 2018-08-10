@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_Mechanic</name>
+    <events>
+        <event-group description="" sid="662771290028376" title="Firing Mechanic">
+            <sub-events>
+                <event-block sid="770502883717161">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="309902508788588" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="800566949041054" type="Player">
+                            <param id="0" name="Object">PlayerMuzzle</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="281326918409886" type="System">
+                            <param id="0" name="Object to create">HitEffect</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="857404729809790" title="Enemy Spawn">
+            <sub-events>
+                <event-block sid="754719153971589">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="282801490256862" type="System">
+                            <param id="0" name="Interval (seconds)">random(1,10)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="905047977689945" type="System">
+                            <param id="0" name="Object to create">DoorR</param>
+                            <param id="1" name="Layer">3</param>
+                            <param id="2" name="X">SpawnDoorR.X</param>
+                            <param id="3" name="Y">SpawnDoorR.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="762479450075620" title="Enemy Attack" />
+    </events>
+</c2eventsheet>
