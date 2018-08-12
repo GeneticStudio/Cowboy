@@ -380,7 +380,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="955142530455975" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Shop.png">
+                        <collision-poly>
+                            <point x="0.014377" y="0.209375" />
+                            <point x="0.5" y="0.126563" />
+                            <point x="0.943291" y="0.0359375" />
+                            <point x="0.98722" y="0.6125" />
+                            <point x="0.709265" y="0.70625" />
+                            <point x="0.5" y="0.81875" />
+                            <point x="0.0423323" y="0.917188" />
+                            <point x="0.0295527" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -396,7 +407,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="163348346170180" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.500314" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Buttons\Start.png">
+                        <collision-poly>
+                            <point x="0.158192" y="0.163212" />
+                            <point x="0.499686" y="0.00453368" />
+                            <point x="0.848713" y="0.156088" />
+                            <point x="0.998117" y="0.5" />
+                            <point x="0.842436" y="0.837435" />
+                            <point x="0.499686" y="0.994171" />
+                            <point x="0.14752" y="0.847798" />
+                            <point x="0.00188324" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -465,7 +487,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754290927891610" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\Options.png">
+                        <collision-poly>
+                            <point x="0.0208831" y="0.0514706" />
+                            <point x="0.5" y="0.0441176" />
+                            <point x="0.968974" y="0.0235294" />
+                            <point x="0.980907" y="0.5" />
+                            <point x="0.984487" y="0.797059" />
+                            <point x="0.5" y="0.879412" />
+                            <point x="0.00536993" y="0.986765" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -481,7 +513,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247921526859529" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.49078" hotspotY="0.429313" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\OptionPaper.png">
+                        <collision-poly>
+                            <point x="0.0856846" y="0" />
+                            <point x="0.893025" y="0" />
+                            <point x="1" y="0.429258" />
+                            <point x="1" y="1" />
+                            <point x="0" y="0.995715" />
+                            <point x="0" y="0.429258" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -494,7 +535,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400154955008848" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.56432" hotspotY="0.703193" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Credits\CrossOptwPaperNail.png">
+                        <collision-poly>
+                            <point x="0.162047" y="0.164533" />
+                            <point x="0.564059" y="0.111069" />
+                            <point x="0.693876" y="0.425169" />
+                            <point x="0.908841" y="0.703181" />
+                            <point x="0.459368" y="0.756644" />
+                            <point x="0.564059" y="0.681795" />
+                            <point x="0.633853" y="0.790059" />
+                            <point x="0.0866692" y="0.703181" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -510,7 +562,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390690826041447" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Buttons\Creditss.png">
+                        <collision-poly>
+                            <point x="0.171924" y="0.211788" />
+                            <point x="0.5" y="0.00388601" />
+                            <point x="0.821767" y="0.21956" />
+                            <point x="0.998948" y="0.5" />
+                            <point x="0.814406" y="0.771373" />
+                            <point x="0.5" y="0.993523" />
+                            <point x="0.162461" y="0.79987" />
+                            <point x="0.00210305" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -523,7 +586,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771690367719968" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.496723" hotspotY="0.485697" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Credits\creditwocross.png">
+                        <collision-poly>
+                            <point x="0.0524345" y="0.0785149" />
+                            <point x="0.496723" y="0.00121729" />
+                            <point x="0.944288" y="0.0742544" />
+                            <point x="0.998595" y="0.485697" />
+                            <point x="0.961142" y="0.919051" />
+                            <point x="0.496723" y="0.998783" />
+                            <point x="0.039794" y="0.909312" />
+                            <point x="0.00234082" y="0.485697" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -536,7 +610,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591618273670742" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.56432" hotspotY="0.703193" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Credits\CrossOptwPaperNail.png">
+                        <collision-poly>
+                            <point x="0.0212379" y="0.222292" />
+                            <point x="0.73301" y="0.010645" />
+                            <point x="0.988471" y="0.685035" />
+                            <point x="0.818568" y="0.732623" />
+                            <point x="0.628034" y="0.812774" />
+                            <point x="0.267597" y="0.971823" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -549,7 +632,15 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698123663007594" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.445066" hotspotY="-0.501502" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\GuitarBGM.png">
+                        <collision-poly>
+                            <point x="0.822953" y="0.136637" />
+                            <point x="0.445066" y="0.129129" />
+                            <point x="0.737579" y="0.298799" />
+                            <point x="0.445066" y="0.743243" />
+                            <point x="0.00839748" y="0.608108" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -562,7 +653,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536037554554346" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.526042" hotspotY="0.691011" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\PistolSFX.png">
+                        <collision-poly>
+                            <point x="0.427951" y="0.370787" />
+                            <point x="0.526042" y="0.349719" />
+                            <point x="0.841146" y="0.0196629" />
+                            <point x="0.256944" y="0.691011" />
+                            <point x="0.330729" y="0.536517" />
+                            <point x="0.778646" y="0.44382" />
+                            <point x="0.0416667" y="0.691011" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -883,7 +984,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650100404531983" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Plank.png">
+                        <collision-poly>
+                            <point x="0.0138274" y="0.0347682" />
+                            <point x="0.5" y="0.00331126" />
+                            <point x="0.986726" y="0.0347682" />
+                            <point x="0.976217" y="0.930464" />
+                            <point x="0.5" y="0.996689" />
+                            <point x="0.0160398" y="0.955298" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
