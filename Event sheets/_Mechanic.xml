@@ -45,5 +45,11 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="762479450075620" title="Enemy Attack" />
+        <event-block sid="583319982700317">
+            <conditions>
+                <condition id="6" name="Is empty" sid="953471946989598" type="EnemySpawn" />
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Main Menu</layout>
-        <layout order="2">Game</layout>
+        <layout order="0">Main Menu</layout>
+        <layout active="1" order="2">Game</layout>
         <event-sheet order="1">_Main Menu</event-sheet>
         <event-sheet order="3">_Game</event-sheet>
         <event-sheet order="4">DBCheck</event-sheet>
@@ -57,7 +57,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Frame8/" />
         <folder expanded="1" path="animation-folder/Frame7/" />
         <folder expanded="1" path="animation-folder/DoorR/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakTo/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakYon/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakYit/" />
         <folder expanded="1" path="animation-folder/SpawnDoorR/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow9R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow10R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow6R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow5R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow4R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow3R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow2R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow1R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow7R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow8R/" />
         <folder expanded="1" path="animation-folder/Saloon/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Ground/" />
