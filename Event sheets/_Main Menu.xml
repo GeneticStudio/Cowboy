@@ -7,7 +7,7 @@
         <include>DBCheck</include>
         <variable constant="0" name="Cash" sid="338653652087714" static="0" type="number">0</variable>
         <comment>Windows Condition</comment>
-        <variable constant="0" name="isCredits" sid="541406780490291" static="0" type="number">0</variable>
+        <variable comment="1=ShowCredit;0=HideCredit" constant="0" name="isCredits" sid="541406780490291" static="0" type="number">0</variable>
         <variable comment="Option Window State" constant="0" name="isShop" sid="711264832983136" static="0" type="number">0</variable>
         <variable comment="0=Left of Cam; 1=Center Cam; 2=Right of Cam" constant="0" name="TransitionState" sid="656376059967840" static="0" type="number">0</variable>
         <event-group description="" sid="334862867267485" title="Ads">
@@ -34,6 +34,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Delete Keyboard Before Compiling</comment>
         <event-block any="1" sid="677741981472525">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="906632605909731" type="System">
@@ -68,6 +69,19 @@
                     <param id="0" name="Impulse">6</param>
                     <param id="1" name="Angle">190</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771981247887346">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="905585658402442" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="537604885694725" type="Audio">
+                    <param id="0" name="Audio file">uuuu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -132,7 +146,7 @@
                     <param id="0" name="Pin to">Cash</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="LiteTween" id="10" name="Start" sid="820337857159612" type="BtnGamePause">
+                <action behavior="LiteTween" id="10" name="Start" sid="820337857159612" type="BtnGameOption">
                     <param id="0" name="Start Mode">0</param>
                     <param id="1" name="Force use current">0</param>
                 </action>
@@ -156,6 +170,18 @@
                     <param id="0" name="Pin to">WdsGamePause</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="165989646942792" type="CrossBGM">
+                    <param id="0" name="Pin to">MuteBGM</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="754523091782353" type="CrossSFX">
+                    <param id="0" name="Pin to">MuteSFX</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="513810837118287" type="RackBG">
+                    <param id="0" name="Pin to">WdsShop</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>Call DB</comment>
@@ -171,10 +197,124 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="Muted/unMuted" sid="971117413452639" title="Audio Option2">
+            <sub-events>
+                <event-block sid="913890589358745">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="601815540721572" type="Touch">
+                            <param id="0" name="Object">MuteBGM</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="816909135493818" type="System">
+                            <param id="0" name="Variable">isPaused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="657119274138839">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="650938170944027" type="System">
+                                    <param id="0" name="Variable">isBGMMuted</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="720586371374537" type="Audio">
+                                    <param id="0" name="Tag">&quot;BGM&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="983756209607136" type="CrossBGM">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="236153197624659" type="System">
+                                    <param id="0" name="Variable">isBGMMuted</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="657998517841484">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="868324476986855" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="327200267298269" type="Audio">
+                                    <param id="0" name="Tag">&quot;BGM&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="596252265964923" type="CrossBGM">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="792739461327795" type="System">
+                                    <param id="0" name="Variable">isBGMMuted</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="394095158209727">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="408890299662044" type="Touch">
+                            <param id="0" name="Object">MuteSFX</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="580928267557111" type="System">
+                            <param id="0" name="Variable">isPaused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="810368114504208">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="281566024682463" type="System">
+                                    <param id="0" name="Variable">isSFXMuted</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="345239496517373" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="123790075729771" type="CrossSFX">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="486018784071037" type="System">
+                                    <param id="0" name="Variable">isSFXMuted</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="154941435682337">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="528455641376596" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="759716851342454" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="895952784368195" type="CrossSFX">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="830217213961881" type="System">
+                                    <param id="0" name="Variable">isSFXMuted</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="273480733056217">
             <conditions>
                 <condition id="3" name="On touched object" sid="586863806947016" type="Touch">
-                    <param id="0" name="Object">BtnGamePause</param>
+                    <param id="0" name="Object">BtnGameOption</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="607931891571402" type="System">
                     <param id="0" name="First value">isCredits</param>
@@ -207,6 +347,10 @@
                 <action behavior="LiteTween" id="10" name="Start" sid="247976417100380" type="WdsGamePause">
                     <param id="0" name="Start Mode">0</param>
                     <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="426749814693575" type="System">
+                    <param id="0" name="Variable">isPaused</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -247,41 +391,11 @@
                     <param id="0" name="Start Mode">0</param>
                     <param id="1" name="Force use current">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="453133704838573" type="System">
+                    <param id="0" name="Variable">isPaused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
-        </event-block>
-        <event-block sid="419445620152895">
-            <conditions>
-                <condition behavior="LiteTween" id="4" name="On tween end" sid="522091760736490" type="WdsGamePause" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="202524894352352">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="662918122583054" type="System">
-                            <param id="0" name="Variable">isPaused</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="484195501860340" type="System">
-                            <param id="0" name="Variable">isPaused</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="286727991388052">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="728472912018390" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="674333429198458" type="System">
-                            <param id="0" name="Variable">isPaused</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="424472432578367">
             <conditions>
@@ -303,12 +417,12 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-                <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="406692553910446" type="Transition" />
                 <condition id="-14" name="Compare variable" sid="856588151362358" type="System">
                     <param id="0" name="Variable">TransitionState</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="406692553910446" type="Transition" />
             </conditions>
             <actions>
                 <action behavior="LiteTween" id="10" name="Start" sid="497225050395858" type="Transition">
@@ -325,63 +439,15 @@
             <conditions>
                 <condition behavior="LiteTween" id="4" name="On tween end" sid="455392777260888" type="Transition" />
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="945006443616533">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="190389254098555" type="System">
-                            <param id="0" name="Variable">TransitionState</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="161712986589620" type="Title">
-                            <param id="0" name="Pin to">Transition</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="388540354932479" type="BtnStart">
-                            <param id="0" name="Pin to">Transition</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="155009087435513" type="BtnShop">
-                            <param id="0" name="Pin to">Transition</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="225253401970196" type="BtnCredits">
-                            <param id="0" name="Pin to">Transition</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="444472216286341" type="Cash">
-                            <param id="0" name="Pin to">Transition</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="349722538117349" type="Transition">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">2313</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="638449604489351" type="Transition">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="681558346230784" type="System">
-                            <param id="0" name="Variable">TransitionState</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="374871353103663">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="693759000702450" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="842982680546124" type="System">
-                            <param id="0" name="Layout">Game</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-9" name="Set value" sid="851432300171771" type="System">
+                    <param id="0" name="Variable">NextLayout</param>
+                    <param id="1" name="Value">&quot;Game&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="413001026167535" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="662967561736308">
             <conditions>

@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Main Menu</layout>
-        <layout order="2">Game</layout>
+        <layout order="0">Main Menu</layout>
+        <layout active="1" order="2">Game</layout>
         <event-sheet order="1">_Main Menu</event-sheet>
         <event-sheet order="3">_Game</event-sheet>
         <event-sheet order="4">DBCheck</event-sheet>
@@ -27,13 +27,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Image/" />
-        <folder expanded="1" path="object-folder/Image/Interior/" />
-        <folder expanded="1" path="object-folder/Image/Frame/" />
+        <folder expanded="0" path="object-folder/Image/Interior/" />
+        <folder expanded="0" path="object-folder/Image/Frame/" />
         <folder expanded="1" path="object-folder/Image/Enemies/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Window1/" />
@@ -57,7 +57,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Frame8/" />
         <folder expanded="1" path="animation-folder/Frame7/" />
         <folder expanded="1" path="animation-folder/DoorR/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakTo/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakYon/" />
+        <folder expanded="1" path="animation-folder/DoorR/PakYit/" />
         <folder expanded="1" path="animation-folder/SpawnDoorR/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow9R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow10R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow6R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow5R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow4R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow3R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow2R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow1R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow7R/" />
+        <folder expanded="1" path="animation-folder/SpawnWindow8R/" />
         <folder expanded="1" path="animation-folder/Saloon/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Ground/" />
@@ -69,7 +82,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/WdsShop/" />
         <folder expanded="1" path="animation-folder/WdsTutorial/" />
         <folder expanded="1" path="animation-folder/WdsTutorClose/" />
-        <folder expanded="1" path="animation-folder/BtnGamePause/" />
+        <folder expanded="1" path="animation-folder/BtnGameOption/" />
         <folder expanded="1" path="animation-folder/WdsGamePause/" />
         <folder expanded="1" path="animation-folder/WdsGamePauseClose/" />
         <folder expanded="1" path="animation-folder/BtnCredits/" />
@@ -84,12 +97,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Mountain/" />
         <folder expanded="1" path="animation-folder/Mountain2/" />
         <folder expanded="1" path="animation-folder/WdsResult/" />
-        <folder expanded="1" path="animation-folder/ResResult/" />
-        <folder expanded="1" path="animation-folder/ResTime/" />
-        <folder expanded="1" path="animation-folder/ResBanditKilled/" />
-        <folder expanded="1" path="animation-folder/ResHostageKilled/" />
-        <folder expanded="1" path="animation-folder/ResAccuracy/" />
-        <folder expanded="1" path="animation-folder/ResCash/" />
         <folder expanded="1" path="animation-folder/ResBtnClose/" />
         <folder expanded="1" path="animation-folder/ShpBox/" />
         <folder expanded="1" path="animation-folder/BtnShopClose/" />
@@ -109,5 +116,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ShpBox8/" />
         <folder expanded="1" path="animation-folder/ShpBox9/" />
         <folder expanded="1" path="animation-folder/ShpBox10/" />
+        <folder expanded="1" path="animation-folder/BtnPause/" />
+        <folder expanded="1" path="animation-folder/Health/" />
+        <folder expanded="1" path="animation-folder/WellDone/" />
+        <folder expanded="1" path="animation-folder/CrossSFX/" />
+        <folder expanded="1" path="animation-folder/CrossBGM/" />
+        <folder expanded="1" path="animation-folder/Loading/" />
     </folders-expanded>
 </c2uistate>

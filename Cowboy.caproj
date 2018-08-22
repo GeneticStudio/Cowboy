@@ -3,7 +3,7 @@
     <name>Cowboy</name>
     <description></description>
     <version>1.0.0.0</version>
-    <author></author>
+    <author>Genetic Game Circle</author>
     <author-email></author-email>
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
@@ -18,11 +18,13 @@
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Vooxe" id="vooxe" version="1">Vooxe Google Ads</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -40,16 +42,16 @@
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>Main Menu</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Landscape</prop>
-        <prop name="Pause on unfocus">No</prop>
+        <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
@@ -225,24 +227,170 @@
             <object-folder name="Enemies">
                 <object-type name="DoorR" sid="903653798780775">
                     <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Flash" sid="235155629789178">
+                            <behavior id="Flash" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
-                        <animation framecount="2" loop="0" name="PakTo" pingpong="0" repeatcount="1" repeatto="0" sid="132719474654287" speed="1">
-                            <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakToInguk.png">
-                                <collision-poly>
-                                    <point x="0.59673" y="0.183601" />
-                                    <point x="0.482289" y="0.223708" />
-                                    <point x="0.915531" y="0.00534759" />
-                                    <point x="0.997275" y="0.493761" />
-                                    <point x="0.506812" y="0.848485" />
-                                    <point x="0.482289" y="0.876114" />
-                                    <point x="0.013624" y="0.994652" />
-                                    <point x="0.594005" y="0.493761" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakTo.png">
-                                <image-point name="MuzzleFlash" x="0.418919" y="0.228916" />
-                            </frame>
-                        </animation>
+                        <animation-folder name="PakTo">
+                            <animation framecount="2" loop="0" name="PakToDoor" pingpong="0" repeatcount="1" repeatto="0" sid="132719474654287" speed="1">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakToInguk.png">
+                                    <collision-poly>
+                                        <point x="0.59673" y="0.183601" />
+                                        <point x="0.482289" y="0.223708" />
+                                        <point x="0.915531" y="0.00534759" />
+                                        <point x="0.997275" y="0.493761" />
+                                        <point x="0.506812" y="0.848485" />
+                                        <point x="0.482289" y="0.876114" />
+                                        <point x="0.013624" y="0.994652" />
+                                        <point x="0.594005" y="0.493761" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakTo.png">
+                                    <image-point name="MuzzleFlash" x="0.418919" y="0.228916" />
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="PakToWindow" pingpong="0" repeatcount="1" repeatto="0" sid="854534770820507" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsA3.png" />
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakTo.png">
+                                    <image-point name="MuzzleFlash" x="0.421922" y="0.416149" />
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakToDeadDoor" pingpong="0" repeatcount="1" repeatto="0" sid="456999722964555" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakTo2.png">
+                                    <collision-poly>
+                                        <point x="0.300451" y="0.295637" />
+                                        <point x="0.506006" y="0" />
+                                        <point x="0.736288" y="0.272492" />
+                                        <point x="0.847566" y="0.503935" />
+                                        <point x="0.802746" y="0.797578" />
+                                        <point x="0.506006" y="0.959588" />
+                                        <point x="0.264904" y="0.745503" />
+                                        <point x="0.0902604" y="0.503935" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakToDeadWindow" pingpong="0" repeatcount="1" repeatto="0" sid="136887736642632" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\PakTo2.png">
+                                    <collision-poly>
+                                        <point x="0.303497" y="0.344461" />
+                                        <point x="0.500699" y="0.0257967" />
+                                        <point x="0.696504" y="0.345979" />
+                                        <point x="0.974825" y="0.915023" />
+                                        <point x="0.671329" y="0.998483" />
+                                        <point x="0.500699" y="0.998483" />
+                                        <point x="0.54965" y="0.998483" />
+                                        <point x="0.0335664" y="0.915023" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                        <animation-folder name="PakYon">
+                            <animation framecount="2" loop="0" name="PakYonDoor" pingpong="0" repeatcount="1" repeatto="0" sid="969214024714273" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\C3IngukDoor.png" />
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsC1.png">
+                                    <image-point name="MuzzleFlash" x="0.690852" y="0.221043" />
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakYonDeadDoor" pingpong="0" repeatcount="1" repeatto="0" sid="722051532399078" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsC2.png">
+                                    <collision-poly>
+                                        <point x="0.00710059" y="0.153478" />
+                                        <point x="0.355917" y="0.12789" />
+                                        <point x="0.550296" y="0.259482" />
+                                        <point x="0.643491" y="0.476973" />
+                                        <point x="0.502367" y="0.661566" />
+                                        <point x="0.355917" y="1" />
+                                        <point x="0.100296" y="0.7365" />
+                                        <point x="0" y="0.476973" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="PakYonWindow" pingpong="0" repeatcount="1" repeatto="0" sid="820090708302083" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsC3.png">
+                                    <collision-poly>
+                                        <point x="0.174129" y="0.0761523" />
+                                        <point x="1" y="0.358717" />
+                                        <point x="1" y="0.981964" />
+                                        <point x="1" y="1" />
+                                        <point x="1" y="1" />
+                                        <point x="0.273632" y="1" />
+                                        <point x="0.746269" y="0.981964" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsC1.png">
+                                    <image-point name="MuzzleFlash" x="0.695238" y="0.446237" />
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakYonDeadWindow" pingpong="0" repeatcount="1" repeatto="0" sid="424913308186957" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\OpponentsC2.png">
+                                    <collision-poly>
+                                        <point x="0.784615" y="0.978417" />
+                                        <point x="0.957692" y="1" />
+                                        <point x="0.561538" y="1" />
+                                        <point x="0.378846" y="1" />
+                                        <point x="0.436538" y="0.978417" />
+                                        <point x="0.421154" y="0.343525" />
+                                        <point x="0.561538" y="0.21223" />
+                                        <point x="0.811538" y="0.241007" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                        <animation-folder name="PakYit">
+                            <animation framecount="2" loop="0" name="PakYitDoor" pingpong="0" repeatcount="1" repeatto="0" sid="216561951382352" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\2CIngukDoor.png">
+                                    <collision-poly>
+                                        <point x="0.324201" y="0.0632911" />
+                                        <point x="0.484018" y="0.0244123" />
+                                        <point x="0.945205" y="0.00361664" />
+                                        <point x="0.995434" y="0.508137" />
+                                        <point x="0.598173" y="0.943942" />
+                                        <point x="0.484018" y="0.995479" />
+                                        <point x="0.100457" y="0.997288" />
+                                        <point x="0.47032" y="0.508137" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\Opponents2A.png">
+                                    <image-point name="MuzzleFlash" x="0.574468" y="0.233533" />
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="PakYitWindow" pingpong="0" repeatcount="1" repeatto="0" sid="795664855041010" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\Opponents2C.png" />
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\Opponents2A.png">
+                                    <image-point name="MuzzleFlash" x="0.576402" y="0.416794" />
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakYitDeadDoor" pingpong="0" repeatcount="1" repeatto="0" sid="223213284419536" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\Opponents2B.png">
+                                    <collision-poly>
+                                        <point x="0.272727" y="0.133508" />
+                                        <point x="0.495455" y="0.0427574" />
+                                        <point x="0.815152" y="0.0776614" />
+                                        <point x="0.778788" y="0.506108" />
+                                        <point x="0.880303" y="0.972077" />
+                                        <point x="0.495455" y="0.565445" />
+                                        <point x="0.175758" y="0.934555" />
+                                        <point x="0.243939" y="0.506108" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="1" loop="0" name="PakYitDeadWindow" pingpong="0" repeatcount="1" repeatto="0" sid="166736359901552" speed="5">
+                                <frame duration="1" hotspotX="1" hotspotY="1" original-source="E:\Workspace\Game\AssetCowboy\Image\Opponents\Opponents2B.png">
+                                    <collision-poly>
+                                        <point x="0.272727" y="0.251232" />
+                                        <point x="0.495455" y="0.0804598" />
+                                        <point x="0.815152" y="0.146141" />
+                                        <point x="0.778788" y="0.952381" />
+                                        <point x="0.880303" y="0.998358" />
+                                        <point x="0.495455" y="0.998358" />
+                                        <point x="0.175758" y="0.998358" />
+                                        <point x="0.243939" y="0.952381" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
                     </animation-folder>
                 </object-type>
                 <object-type name="SpawnDoorR" sid="428301139019445">
@@ -253,11 +401,91 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="SpawnWindow9R" sid="491541765510886">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123389629431171" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow10R" sid="453735932869379">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554629759477635" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow6R" sid="652311318233428">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930619567845859" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow5R" sid="442478885493141">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304581901210175" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow4R" sid="231626332431379">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808462122763158" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow3R" sid="767344300147513">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287311975618347" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow2R" sid="222149950995276">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860245277466043" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow1R" sid="950105041624928">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386835911405148" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow7R" sid="195761125879521">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="779650464988420" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SpawnWindow8R" sid="443797674139131">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677734932314295" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
             <object-type name="Saloon" sid="825939741200957">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569273947628794" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569273947628794" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.500498" original-source="E:\Workspace\Game\Cowboy\Asset\Image\Saloons\SaloonNoDoorNoWindows.png">
                             <collision-poly>
                                 <point x="0.0870628" y="0.168694" />
@@ -269,6 +497,7 @@
                                 <point x="0.0350422" y="0.554704" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500498" original-source="E:\Workspace\Game\AssetCowboy\Image\Saloons\SaloonBrokenWindows.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -434,7 +663,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346142467067746" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.498042" hotspotY="0.499274" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Rack Hollow.png">
+                        <collision-poly>
+                            <point x="0.0101801" y="0.00145138" />
+                            <point x="0.985904" y="0.00145138" />
+                            <point x="0.972592" y="0.499274" />
+                            <point x="0.986688" y="0.998549" />
+                            <point x="0.498042" y="0.970972" />
+                            <point x="0.018794" y="0.981132" />
+                            <point x="0.0305403" y="0.499274" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -478,11 +717,14 @@
         <object-type name="LocalStorage" sid="853023344042714">
             <plugin id="LocalStorage" />
         </object-type>
-        <object-type name="BtnGamePause" sid="605915244444779">
+        <object-type name="BtnGameOption" sid="605915244444779">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="LiteTween" sid="493262753827571">
                     <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="992673157428204">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -537,14 +779,14 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400154955008848" speed="5">
                     <frame duration="1" hotspotX="0.56432" hotspotY="0.703193" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Credits\CrossOptwPaperNail.png">
                         <collision-poly>
-                            <point x="0.162047" y="0.164533" />
-                            <point x="0.564059" y="0.111069" />
-                            <point x="0.693876" y="0.425169" />
-                            <point x="0.908841" y="0.703181" />
-                            <point x="0.459368" y="0.756644" />
-                            <point x="0.564059" y="0.681795" />
-                            <point x="0.633853" y="0.790059" />
-                            <point x="0.0866692" y="0.703181" />
+                            <point x="0.181432" y="0.187226" />
+                            <point x="0.5" y="0.0907952" />
+                            <point x="0.816141" y="0.189731" />
+                            <point x="0.92051" y="0.499687" />
+                            <point x="0.837985" y="0.832812" />
+                            <point x="0.5" y="0.879775" />
+                            <point x="0.186286" y="0.807765" />
+                            <point x="0.0916262" y="0.499687" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -634,11 +876,14 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698123663007594" speed="5">
                     <frame duration="1" hotspotX="0.445066" hotspotY="-0.501502" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\GuitarBGM.png">
                         <collision-poly>
-                            <point x="0.822953" y="0.136637" />
-                            <point x="0.445066" y="0.129129" />
-                            <point x="0.737579" y="0.298799" />
-                            <point x="0.445066" y="0.743243" />
-                            <point x="0.00839748" y="0.608108" />
+                            <point x="0.0839748" y="0.18018" />
+                            <point x="0.49965" y="0.003003" />
+                            <point x="0.969209" y="0.0660661" />
+                            <point x="0.685794" y="0.325826" />
+                            <point x="0.438069" y="0.695195" />
+                            <point x="0.185444" y="0.944444" />
+                            <point x="0.0752274" y="0.863363" />
+                            <point x="0.00139958" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -655,13 +900,14 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536037554554346" speed="5">
                     <frame duration="1" hotspotX="0.526042" hotspotY="0.691011" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\PistolSFX.png">
                         <collision-poly>
-                            <point x="0.427951" y="0.370787" />
-                            <point x="0.526042" y="0.349719" />
-                            <point x="0.841146" y="0.0196629" />
-                            <point x="0.256944" y="0.691011" />
-                            <point x="0.330729" y="0.536517" />
-                            <point x="0.778646" y="0.44382" />
-                            <point x="0.0416667" y="0.691011" />
+                            <point x="0.130208" y="0.210674" />
+                            <point x="0.5" y="0.355337" />
+                            <point x="0.891493" y="0.175562" />
+                            <point x="0.920139" y="0.5" />
+                            <point x="0.646701" y="0.428371" />
+                            <point x="0.5" y="0.498596" />
+                            <point x="0.00520833" y="0.991573" />
+                            <point x="0.0972222" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -772,85 +1018,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524658522158298" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResResult" sid="909070863368863">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="199493744735462">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="637515512490594" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResTime" sid="697385656588952">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="122893556322484">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="461882993527511" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResBanditKilled" sid="658667884271092">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="102687121706039">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="386048851605552" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResHostageKilled" sid="776001244264879">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="493939960540780">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655790352219844" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResAccuracy" sid="278340539370988">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="695443757504914">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247871400535027" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ResCash" sid="566936338789890">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="656153338486388">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652535543038970" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.499485" hotspotY="0.495192" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Result\Result Layout (wo Button).png">
+                        <collision-poly>
+                            <point x="0.0871134" y="0.0551036" />
+                            <point x="0.498969" y="0.0772929" />
+                            <point x="0.893814" y="0.0676775" />
+                            <point x="0.997423" y="0.494822" />
+                            <point x="0.985052" y="0.987796" />
+                            <point x="0.00721649" y="0.992234" />
+                            <point x="0.0170103" y="0.494822" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -916,7 +1094,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987592968287491" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun1.png">
+                        <collision-poly>
+                            <point x="0.279816" y="0.148148" />
+                            <point x="0.5" y="0.0740741" />
+                            <point x="0.986238" y="0.175926" />
+                            <point x="0.490826" y="0.472222" />
+                            <point x="0.0733945" y="0.944444" />
+                            <point x="0.114679" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -929,7 +1116,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="352263213611022" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.496359" hotspotY="0.504696" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Credits\CrossOptwPaperNail.png">
+                        <collision-poly>
+                            <point x="0.181432" y="0.187226" />
+                            <point x="0.5" y="0.0907952" />
+                            <point x="0.816141" y="0.189731" />
+                            <point x="0.92051" y="0.499687" />
+                            <point x="0.837985" y="0.832812" />
+                            <point x="0.5" y="0.879775" />
+                            <point x="0.186286" y="0.807765" />
+                            <point x="0.0916262" y="0.499687" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -942,7 +1140,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682568106260078" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.530387" hotspotY="0.512605" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun3.png">
+                        <collision-poly>
+                            <point x="0.0331492" y="0.0504202" />
+                            <point x="0.497238" y="0.092437" />
+                            <point x="0.955801" y="0.0672269" />
+                            <point x="0.530387" y="0.470588" />
+                            <point x="0.0441989" y="0.932773" />
+                            <point x="0.154696" y="0.420168" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -955,7 +1162,15 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487710502275257" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.572973" hotspotY="0.508929" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun2.png">
+                        <collision-poly>
+                            <point x="0.12973" y="0.0982143" />
+                            <point x="0.497297" y="0.0446429" />
+                            <point x="0.978378" y="0.0357143" />
+                            <point x="0.443243" y="0.5" />
+                            <point x="0.0432432" y="0.928571" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -968,7 +1183,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="401579325124853" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.57377" hotspotY="0.516129" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun4.png">
+                        <collision-poly>
+                            <point x="0.0273224" y="0.0403226" />
+                            <point x="0.983607" y="0.0887097" />
+                            <point x="0.601093" y="0.274194" />
+                            <point x="0.502732" y="0.459677" />
+                            <point x="0.0928962" y="0.951613" />
+                            <point x="0.174863" y="0.41129" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1092,7 +1316,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771990717741003" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.469194" hotspotY="0.395683" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun5.png">
+                        <collision-poly>
+                            <point x="0.118483" y="0.151079" />
+                            <point x="0.49763" y="0.0791367" />
+                            <point x="0.966825" y="0.0503597" />
+                            <point x="0.56872" y="0.496403" />
+                            <point x="0.291469" y="0.507195" />
+                            <point x="0.0663507" y="0.899281" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1105,7 +1338,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723869903899393" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.552486" hotspotY="0.495868" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun6.png">
+                        <collision-poly>
+                            <point x="0.0497238" y="0.0743802" />
+                            <point x="0.497238" y="0.0495868" />
+                            <point x="0.972376" y="0.0743802" />
+                            <point x="0.585635" y="0.404959" />
+                            <point x="0.342542" y="0.942149" />
+                            <point x="0.0607735" y="0.909091" />
+                            <point x="0.116022" y="0.495868" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1118,7 +1361,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224479842274472" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.64433" hotspotY="0.477612" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun7.png">
+                        <collision-poly>
+                            <point x="0.108247" y="0.156716" />
+                            <point x="0.5" y="0.0447761" />
+                            <point x="0.953608" y="0.0671642" />
+                            <point x="0.618557" y="0.447761" />
+                            <point x="0.298969" y="0.895522" />
+                            <point x="0.0824742" y="0.880597" />
+                            <point x="0.134021" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1131,7 +1384,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995093218866614" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.524691" hotspotY="0.430894" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun8.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0487805" />
+                            <point x="0.981481" y="0.0243902" />
+                            <point x="0.925926" y="0.268293" />
+                            <point x="0.58642" y="0.609756" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0.123457" y="0.495935" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1144,7 +1406,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="252377944164920" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.486339" hotspotY="0.423729" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun9.png">
+                        <collision-poly>
+                            <point x="0.120219" y="0.186441" />
+                            <point x="0.497268" y="0.169492" />
+                            <point x="0.928962" y="0.288136" />
+                            <point x="0.519125" y="0.415254" />
+                            <point x="0.0163934" y="0.974576" />
+                            <point x="0.136612" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1157,24 +1428,168 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="659618705495034" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.482625" hotspotY="0.481043" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\Gun10.png">
+                        <collision-poly>
+                            <point x="0.496139" y="0.440758" />
+                            <point x="0.928571" y="0.0165877" />
+                            <point x="0.996139" y="0.085308" />
+                            <point x="0.584942" y="0.57109" />
+                            <point x="0.496139" y="0.774882" />
+                            <point x="0.190154" y="1" />
+                            <point x="0.00772201" y="0.824644" />
+                            <point x="0.378378" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type global="1" name="EnemySpawn" sid="500313353216365">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="BtnPause" sid="322419207458284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833424891054578" speed="5">
+                    <frame duration="1" hotspotX="0.510376" hotspotY="0.428109" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Buttons\Pause.png">
+                        <collision-poly>
+                            <point x="0.197147" y="0.115285" />
+                            <point x="0.510376" y="0.00388601" />
+                            <point x="0.822957" y="0.115933" />
+                            <point x="0.988975" y="0.428109" />
+                            <point x="0.885214" y="0.802461" />
+                            <point x="0.510376" y="0.993523" />
+                            <point x="0.116732" y="0.821244" />
+                            <point x="0.0129702" y="0.428109" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Health" sid="224594180346478">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="900617725135910" speed="5">
+                    <frame duration="1" hotspotX="0.499663" hotspotY="0.497563" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Card (Health Bar)\Health Bar.png">
+                        <collision-poly>
+                            <point x="0.0276094" y="0.0146223" />
+                            <point x="0.499663" y="0.00203087" />
+                            <point x="0.971717" y="0.0146223" />
+                            <point x="0.997306" y="0.497563" />
+                            <point x="0.97037" y="0.979691" />
+                            <point x="0.499663" y="0.999188" />
+                            <point x="0.0262626" y="0.981316" />
+                            <point x="0.0026936" y="0.497563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WellDone" sid="723771937657731">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404457135066466" speed="5">
+                    <frame duration="1" hotspotX="0.481987" hotspotY="0.490175" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Stamp\StampWellDoneeee.png">
+                        <collision-poly>
+                            <point x="0.0987991" y="0.20524" />
+                            <point x="0.481987" y="0.0502183" />
+                            <point x="0.851528" y="0.218886" />
+                            <point x="0.980349" y="0.490175" />
+                            <point x="0.878275" y="0.78821" />
+                            <point x="0.481987" y="0.950873" />
+                            <point x="0.122817" y="0.751092" />
+                            <point x="0.0272926" y="0.490175" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrossSFX" sid="522724238685677">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="459515971062386">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602423303019278" speed="5">
+                    <frame duration="1" hotspotX="0.565629" hotspotY="0.692109" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\CrossOpt.png">
+                        <collision-poly>
+                            <point x="0.177267" y="0.16947" />
+                            <point x="0.749662" y="0.239327" />
+                            <point x="0.752368" y="0.499353" />
+                            <point x="0.920162" y="0.923674" />
+                            <point x="0.499323" y="0.680466" />
+                            <point x="0.121786" y="0.88357" />
+                            <point x="0.278755" y="0.499353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrossBGM" sid="599736667254954">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="454896257739554">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130917733250935" speed="5">
+                    <frame duration="1" hotspotX="0.565629" hotspotY="0.692109" original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Options\CrossOpt.png">
+                        <collision-poly>
+                            <point x="0.177267" y="0.16947" />
+                            <point x="0.749662" y="0.239327" />
+                            <point x="0.752368" y="0.499353" />
+                            <point x="0.920162" y="0.923674" />
+                            <point x="0.499323" y="0.680466" />
+                            <point x="0.121786" y="0.88357" />
+                            <point x="0.278755" y="0.499353" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Loading" sid="591441173713917">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="211207770423602">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="221868223213793" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadingText" sid="923764356015215">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="dot" sid="799825556751286" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="RackBG" sid="204864664700294">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Pin" sid="760449815888966">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\Google Drive\GENETIC\Side Projects\Cowboy\Pics\UI\Shop\RackTiled.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Main Menu.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Loading.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>_Main Menu.xml</event-sheet>
         <event-sheet>_Game.xml</event-sheet>
         <event-sheet>DBCheck.xml</event-sheet>
         <event-sheet>_Mechanic.xml</event-sheet>
+        <event-sheet>_Loading.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="3">
@@ -1207,8 +1622,20 @@
         </global-instance>
         <global-instance type="Function" uid="20" />
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="branding iron.ogg" />
+        <file name="click.ogg" />
+        <file name="Dok-dok an palu.ogg" />
+        <file name="Hover.ogg" />
+        <file name="Item Bought.ogg" />
+        <file name="ricochet1.ogg" />
+        <file name="ricochet2.ogg" />
+        <file name="shop1.ogg" />
+        <file name="shop2.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="uuuu.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
