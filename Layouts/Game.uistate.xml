@@ -5,17 +5,23 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <position-x>2584.45</position-x>
         <position-y>19.3413</position-y>
         <position-z>197.844</position-z>
         <lookat-x>2584.45</lookat-x>
         <lookat-y>19.3413</lookat-y>
 =======
+=======
+>>>>>>> c3200c480fd65548ac72d4741dfbe2ec67f74e30
         <position-x>2850.42</position-x>
         <position-y>645.871</position-y>
         <position-z>27.0335</position-z>
         <lookat-x>2850.42</lookat-x>
         <lookat-y>645.871</lookat-y>
+<<<<<<< HEAD
+>>>>>>> c3200c480fd65548ac72d4741dfbe2ec67f74e30
+=======
 >>>>>>> c3200c480fd65548ac72d4741dfbe2ec67f74e30
         <lookat-z>0</lookat-z>
     </camera>
@@ -32,7 +38,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Effects" />
     </properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <active-layer name="Result" />
+=======
+    <active-layer name="Enemy" />
+>>>>>>> c3200c480fd65548ac72d4741dfbe2ec67f74e30
 =======
     <active-layer name="Enemy" />
 >>>>>>> c3200c480fd65548ac72d4741dfbe2ec67f74e30
