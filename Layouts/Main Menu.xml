@@ -436,8 +436,8 @@
                         <x>305</x>
                         <y>914</y>
                         <z>0</z>
-                        <width>113.100349426</width>
-                        <height>91.812271118</height>
+                        <width>76.574668884</width>
+                        <height>62.161556244</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -445,73 +445,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cash" uid="46">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>Linear</function>
-                                <target>1326.18, 169.1</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>0.3</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1326</x>
-                        <y>79</y>
-                        <z>0</z>
-                        <width>291</width>
-                        <height>65</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ValCash" uid="47">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Narrow,-27,700,1</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1330</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>247</width>
-                        <height>44</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BtnGamePause" uid="48">
+                <instance type="BtnGameOption" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -530,6 +464,7 @@
                                 <enforce-mode>Enforce</enforce-mode>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -809,6 +744,56 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CrossSFX" uid="96">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>770</x>
+                        <y>-221</y>
+                        <z>0</z>
+                        <width>127.484367371</width>
+                        <height>133.349685669</height>
+                        <depth>0</depth>
+                        <hotspotX>0.565629244</hotspotX>
+                        <hotspotY>0.692108691</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CrossBGM" uid="95">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>857</x>
+                        <y>-77</y>
+                        <z>0</z>
+                        <width>-127.48400116</width>
+                        <height>133.350006104</height>
+                        <depth>0</depth>
+                        <hotspotX>0.565629244</hotspotX>
+                        <hotspotY>0.692108691</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -828,37 +813,25 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="WdsShop" uid="4">
+                <instance type="RackBG" uid="100">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <hotspot>Top-left</hotspot>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Position</tweened-property>
-                                <function>Linear</function>
-                                <target>854, 480</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>0.2</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>854</x>
-                        <y>-301</y>
+                        <x>212</x>
+                        <y>-564</y>
                         <z>0</z>
-                        <width>1167.840698242</width>
-                        <height>655.592895508</height>
+                        <width>1283</width>
+                        <height>571</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -879,8 +852,8 @@
                         <x>554</x>
                         <y>-429</y>
                         <z>0</z>
-                        <width>485</width>
-                        <height>245</height>
+                        <width>342.679626465</width>
+                        <height>169.76789856</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -904,11 +877,11 @@
                         <x>1127</x>
                         <y>-429</y>
                         <z>0</z>
-                        <width>485</width>
-                        <height>245</height>
+                        <width>307.394104004</width>
+                        <height>202.098876953</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.530386746</hotspotX>
+                        <hotspotY>0.512605071</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -929,11 +902,11 @@
                         <x>554</x>
                         <y>-135</y>
                         <z>0</z>
-                        <width>485</width>
-                        <height>245</height>
+                        <width>343.603027344</width>
+                        <height>208.019119263</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.572972953</hotspotX>
+                        <hotspotY>0.508928597</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -954,11 +927,196 @@
                         <x>1127</x>
                         <y>-135</y>
                         <z>0</z>
-                        <width>485</width>
-                        <height>245</height>
+                        <width>322.101226807</width>
+                        <height>218.254379272</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.573770463</hotspotX>
+                        <hotspotY>0.516129017</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox5" uid="101">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1605</x>
+                        <y>-429</y>
+                        <z>0</z>
+                        <width>282.4871521</width>
+                        <height>186.093429565</height>
+                        <depth>0</depth>
+                        <hotspotX>0.469194323</hotspotX>
+                        <hotspotY>0.395683467</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox6" uid="102">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1968</x>
+                        <y>-429</y>
+                        <z>0</z>
+                        <width>288.247253418</width>
+                        <height>192.695678711</height>
+                        <depth>0</depth>
+                        <hotspotX>0.552486181</hotspotX>
+                        <hotspotY>0.495867759</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox7" uid="103">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1608</x>
+                        <y>-135</y>
+                        <z>0</z>
+                        <width>285.447021484</width>
+                        <height>197.164428711</height>
+                        <depth>0</depth>
+                        <hotspotX>0.644329906</hotspotX>
+                        <hotspotY>0.477611929</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox8" uid="104">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1979</x>
+                        <y>-135</y>
+                        <z>0</z>
+                        <width>262.159332275</width>
+                        <height>199.046905518</height>
+                        <depth>0</depth>
+                        <hotspotX>0.524691343</hotspotX>
+                        <hotspotY>0.430894315</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox9" uid="105">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2423</x>
+                        <y>-424</y>
+                        <z>0</z>
+                        <width>183</width>
+                        <height>118</height>
+                        <depth>0</depth>
+                        <hotspotX>0.486338794</hotspotX>
+                        <hotspotY>0.423728824</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShpBox10" uid="106">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2560</x>
+                        <y>-248</y>
+                        <z>0</z>
+                        <width>518</width>
+                        <height>422</height>
+                        <depth>0</depth>
+                        <hotspotX>0.482625484</hotspotX>
+                        <hotspotY>0.481042653</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="WdsShop" uid="4">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>851.494, 479.478</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.2</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>851</x>
+                        <y>-286</y>
+                        <z>0</z>
+                        <width>1369.749389648</width>
+                        <height>770.484008789</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498042285</hotspotX>
+                        <hotspotY>0.499274313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -976,11 +1134,77 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1426</x>
-                        <y>-591</y>
+                        <x>1478</x>
+                        <y>-567</y>
                         <z>0</z>
-                        <width>78.898666382</width>
-                        <height>78.898666382</height>
+                        <width>195.517272949</width>
+                        <height>189.466659546</height>
+                        <depth>0</depth>
+                        <hotspotX>0.496359229</hotspotX>
+                        <hotspotY>0.50469631</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Cash" uid="46">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>391, 166</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.3</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>391</x>
+                        <y>67</y>
+                        <z>0</z>
+                        <width>291</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ValCash" uid="47">
+                    <properties>
+                        <text>0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial Narrow,-27,700,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>395</x>
+                        <y>68</y>
+                        <z>0</z>
+                        <width>247</width>
+                        <height>44</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1002,8 +1226,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1862</x>
-                        <y>-126</y>
+                        <x>-296</x>
+                        <y>-100</y>
                         <z>0</z>
                         <width>578</width>
                         <height>327</height>
@@ -1027,8 +1251,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2009</x>
-                        <y>-17</y>
+                        <x>-149</x>
+                        <y>9</y>
                         <z>0</z>
                         <width>237</width>
                         <height>73</height>
@@ -1052,8 +1276,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1719</x>
-                        <y>-17</y>
+                        <x>-439</x>
+                        <y>9</y>
                         <z>0</z>
                         <width>237</width>
                         <height>73</height>
@@ -1106,7 +1330,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-554</x>
+                        <x>-513</x>
                         <y>480</y>
                         <z>0</z>
                         <width>1280</width>
